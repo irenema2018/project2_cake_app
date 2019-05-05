@@ -1,0 +1,34 @@
+
+<h2 class="main_title">You Order</h2>
+
+<% if logged_in? %>
+  <div class="image_form">
+    <img class="cake_image_small" src="<%= @cake.image_url%>" alt="">
+
+    <form>
+      <p>
+        <label class="order_label">Cake: </label>
+        <input class="order_input" type="text" value="<%= @cake.title %>" disabled>
+      </p>
+      <p>
+        <label class="order_label">Price: </label>
+        <input class="order_input" type="text" value="$<%= @cake.price.to_i %>" disabled>
+      <p>
+        <label class="order_label" for="pickup_date">Pickup Date: </label>
+        <input class="order_input" type="date" value="<%= @order.pickup_date %>" disabled>
+      </p>
+      <p>
+        <label class="order_label" for="customer_name">Customer Name: </label>
+        <input class="order_input" type="text" value="<%= @customer.name %>" disabled>
+      </p>
+      <p>
+        <label class="order_label" for="email">Email: </label>
+        <input class="order_input" type="text" value="<%= @customer.email %>" disabled>
+      </p>
+      <p>
+        <label class="order_label" for="payment">Payment: </label>
+        <input class="order_input" type="text" value="Cash On Pickup" disabled>
+      </p>    
+    </form>
+  </div>
+<% end %>

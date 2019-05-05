@@ -1,0 +1,10 @@
+
+<h1 class="main_title"><%= @cakes.first.cake_type %></h1>
+
+<div id="main_images">
+  <% @cakes.each do |cake| %>
+    <a href="/<%= cake.cake_type %>/<%= cake.title %>">
+      <img class="cake_type_image" src="<%= cake.image_url%>" alt="" title="<%= cake.title%>">
+    </a>
+  <% end %>
+</div>

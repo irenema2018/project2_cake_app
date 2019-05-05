@@ -1,0 +1,171 @@
+body{
+  background-color: rgb(211, 218, 224);
+  font-family: Montserrat, helvetica, sans-serif;
+  font-size: 0.7em;
+  color: rgb(102,102,102);
+}
+
+#container_box {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(rgb(252, 246, 251),rgb(202, 162, 179));
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+header {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+#logo {
+  width:20%;
+  margin:0px;
+}
+
+#description {
+  margin: 0px auto 30px auto;
+} 
+
+#container_bottom {
+  display:flex;
+  justify-content:space-around;
+  align-items: stretch;
+}
+
+aside {
+  width:20%;
+  margin-left: 2%;
+  margin-top: 0px;
+  border-right: solid 1px rgb(102, 102, 102);
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  align-items: center;
+  width: 60%;
+  margin-right: 2%;
+  
+}
+
+.main_title {
+  margin-bottom:3em;
+}
+
+#main_images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cake_type_image {
+  max-width: 350px;
+  max-height: 350px;
+  width: 350px;
+  height: 350px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+.cake_type_image:hover {
+	transform: scale(1.05);
+}
+
+.image_form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cake_image_small {
+  max-width: 350px;
+  max-height: 350px;
+  width: 350px;
+  height: 350px;  
+  margin-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+aside ul {
+  list-style: none;
+  margin-left: 20px;
+  margin-top: 0px;
+  
+}
+
+aside {
+  text-decoration: none;
+}
+
+aside li {
+  margin-left: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.order_label {
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: left;
+  margin-right: 0.5em;
+  margin-top: 1em;
+}
+
+.order_input {
+  float: left;
+  margin-right: 0.5em;
+  margin-top: 1em;
+}
+
+button {
+  margin: 10px 0 10px 0;
+  width: 100%;
+  float: left;
+  color:white;
+  background-color: black;
+  border-radius: 5px; 
+}
+
+a:visited, a:link { 
+  color: rgb(102,102,102);
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.login_label {
+  float: left;
+  clear: left;
+  width: 70px;
+  text-align: left;
+  margin-right: 0.5em;
+  margin-top: 1em;
+}
+
+.login_input {
+  float: left;
+  margin-right: 0.5em;
+  margin-top: 1em;
+}
+
+#login_button {
+  margin: 20px 0 10px 0;
+  width: 83%;
+  float: left;
+  color:white;
+  background-color: black;
+  border-radius: 5px; 
+}

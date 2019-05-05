@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sow'n'soar</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
+  <div id="container_box">
+    <header>
+      <img id="logo"src="https://i.imgur.com/pRJn6rN.png?1" alt="Sow'n'soar logo" title="Where all my cakes are freshly baked, individually handmade and decorated with love.">
+      <h2 id="description"></h2>
+    </header>
+
+    <div id="container_bottom">
+      <aside>
+        <ul>
+          <li><h3><a href="/">HOME</a></h3></li>
+          <li><h3><a href="/mystory">MY STORY</a></h3></li>
+          
+          <li><h3><a href="/">CAKES MENU</a></h3>
+            <% @cake_types.each do |cake_type| %>
+              <li><a href="/<%= cake_type.cake_type %>"><%= cake_type.cake_type%></a></li>
+            <% end %>
+          </li>
+          <li><h3><a href="/track_order">TRACK MY ORDER</a></h3></li>
+          <li><h3><a href="/contact">CONTACT</a></h3></li>
+        </ul>
+      </aside>
+
+      <main>
+          <% if logged_in? %>
+            <h4>Welcome back <%= current_user.name %>, 
+            <a href="/logout">not you?</a></h4>
+          <% end %>
+          <%= yield %>
+      </main>
+    </div>
+
+    <footer>
+    </footer>
+  </div>
+  <script type="text/javascript" src="/javascripts/application.js"></script>
+</body>
+</html>

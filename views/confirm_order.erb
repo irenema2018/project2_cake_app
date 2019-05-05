@@ -1,0 +1,41 @@
+<h1 class="main_title">Check Your Order</h1>
+
+<div class="image_form">
+  <img class="cake_image_small" src="<%= @cake.image_url%>" alt="">
+  
+  <form action="/" method="get">
+    <p>
+      <label class="order_label">Cake: </label>
+      <input type="text" value="<%= @cake.title %>" disabled>
+    </p>
+    <p>
+      <label class="order_label">Price: </label>
+      <input type="text" value="$<%= @cake.price.to_i %>" disabled>
+    </p>
+     <p>
+      <label class="order_label" for="quantity">Quantity: </label>
+      <input class="order_input" type="text" value="<%= @order.quantity %>" disabled>
+    </p>
+    <p>
+      <label class="order_label" for="total_price">Total Price: </label>
+      <input class="order_input" type="text" value="$<%= @order.total_price.to_i %>" disabled >
+    </p>
+    <p>
+      <label class="order_label" for="pickup_date">Pickup Date: </label>
+      <input class="order_input" type="date" value="<%= @pickup_date %>" disabled>
+    </p>
+    <p>
+      <label class="order_label" for="customer_name">Customer Name: </label>
+      <input class="order_input" type="text" value="<%= @customer_name %>" disabled>
+    </p>
+    <p>
+      <label class="order_label" for="email">Email: </label>
+      <input class="order_input" type="text" value="<%= @customer_email %>" disabled>
+    </p>
+    <p>
+      <label class="order_label" for="payment">Payment: </label>
+      <input class="order_input" type="text" value="Cash On Pickup" disabled>
+    </p>
+    <button id="orderDoneBtn">Confirm</button>
+  </form>
+ </div>

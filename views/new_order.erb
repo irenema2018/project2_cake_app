@@ -1,0 +1,40 @@
+
+<h1 class="main_title">New Order</h1>
+
+<div class="image_form">
+  <img class="cake_image_small" src="<%= @cake.image_url%>" alt="">
+
+  <form action="/<%= @cake.cake_type%>/<%= @cake.title %>/order" method="post">
+    <p>
+      <label class="order_label">Cake: </label>
+      <input class="order_input" type="text" value="<%= @cake.title %>" disabled>
+    </p>
+    <p>
+      <label class="order_label">Price: </label>
+      <input class="order_input" type="text" value="$<%= @cake.price.to_i %>" disabled>
+    </p>
+    <p>
+      <label class="order_label" for="quantity">Quantity: </label>
+      <input class="order_input" type="text" name="quantity" value="1" >
+    </p>
+    <p>
+      <label class="order_label" for="pickup_date">Pickup Date: </label>
+      <input class="order_input" type="date" name="pickup_date">
+    </p>
+    <p>
+      <label class="order_label" for="customer_name">Customer Name: </label>
+      <input class="order_input" type="text" name="customer_name">
+    </p>
+    <p>
+      <label class="order_label" for="email">Email: </label>
+      <input class="order_input" type="text" name="email">
+    </p>
+    <p>
+      <label class="order_label" for="password">Password (new customer): </label>
+      <input class="order_input" type="password" name="password">
+    </p>          
+    <p>
+      <button>Next ></button>
+    </p>
+  </form>
+</div>
