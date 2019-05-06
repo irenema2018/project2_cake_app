@@ -6,6 +6,7 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
   <link rel='stylesheet' href='/stylesheets/main.css'>
 </head>
+
 <body>
   <div id="container_box">
     <header>
@@ -19,9 +20,9 @@
           <li><h3><a href="/">HOME</a></h3></li>
           <li><h3><a href="/mystory">MY STORY</a></h3></li>
           
-          <li><h3><a href="/">CAKES MENU</a></h3>
+          <li><h3>CAKES MENU</h3>
             <% @cake_types.each do |cake_type| %>
-              <li><a href="/<%= cake_type.cake_type %>"><%= cake_type.cake_type%></a></li>
+              <li><a href="/cakes/<%= cake_type.cake_type %>"><%= cake_type.cake_type%></a></li>
             <% end %>
           </li>
           <li><h3><a href="/track_order">TRACK MY ORDER</a></h3></li>

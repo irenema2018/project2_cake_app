@@ -65,19 +65,24 @@ get '/contact' do
   erb :contact
 end
 
-get '/:cake_type' do
+# get '/:cake_type' do
+get '/cakes/:cake_type' do
   @cake_types = CakeType.all
-  @cakes = Cake.where(cake_type:params[:cake_type])
+  @cakes = Cake.where(cake_type: params[:cake_type])
   erb :cake_type
 end
 
-get '/:cake_type/:title' do
+get '/cakes/:cake_type/:title' do
   @cake_types = CakeType.all
   @cake = Cake.find_by(title: params[:title])
+  if logged_in?
+    @customer = Customer.find_by(id: session[:customer_id])
+  end
+
   erb :new_order
 end
 
-post '/:cake_type/:title/order' do
+post '/cakes/:cake_type/:title/order' do
   @cake_types = CakeType.all
   @cake = Cake.find_by(title: params[:title])
   
@@ -94,9 +99,9 @@ post '/:cake_type/:title/order' do
     customer.name = @customer_name
     customer.email = @customer_email
   
-    if @password == ""
-      @password = "cheese" # Password cannot be empty
-    end
+    # if @password == ""
+    #   @password = "cheese" # Password cannot be empty
+    # end
   
     customer.password = @password
     customer.save
@@ -113,14 +118,14 @@ post '/:cake_type/:title/order' do
   erb :confirm_order
 end
 
-post '/:cake_type/:title/order/confirm_and_pay' do
-  @cake_types = CakeType.all
-  @cake = Cake.find_by(title: params[:title])
-  erb :pay
-end
+# post '/:cake_type/:title/order/confirm_and_pay' do
+#   @cake_types = CakeType.all
+#   @cake = Cake.find_by(title: params[:title])
+#   erb :pay
+# end
 
 
-post '/session' do
+post '/authenticate' do
   @cake_types = CakeType.all
   customer = Customer.find_by(email: params[:email]) 
   

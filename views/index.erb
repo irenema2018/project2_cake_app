@@ -1,7 +1,7 @@
 
 <div id="main_images">       
   <% @cake_types.each do |cake_type| %>
-    <a href="/<%= cake_type.cake_type %>">
+    <a href="/cakes/<%= cake_type.cake_type %>">
       <img class="cake_type_image" src="<%= cake_type.image_url%>" alt="" title="<%= cake_type.cake_type%>">
     </a>
   <% end %>

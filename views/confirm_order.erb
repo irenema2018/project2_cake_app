@@ -24,17 +24,20 @@
       <label class="order_label" for="pickup_date">Pickup Date: </label>
       <input class="order_input" type="date" value="<%= @pickup_date %>" disabled>
     </p>
-    <p>
-      <label class="order_label" for="customer_name">Customer Name: </label>
-      <input class="order_input" type="text" value="<%= @customer_name %>" disabled>
-    </p>
-    <p>
-      <label class="order_label" for="email">Email: </label>
-      <input class="order_input" type="text" value="<%= @customer_email %>" disabled>
-    </p>
+    <% if logged_in? %>
+    <% else %>
+      <p>
+        <label class="order_label" for="customer_name">Customer Name: </label>
+        <input class="order_input" type="text" value="<%= @customer_name %>" disabled>
+      </p>
+      <p>
+        <label class="order_label" for="email">Email: </label>
+        <input class="order_input" type="text" value="<%= @customer_email %>" disabled>
+      </p>
+    <% end %>
     <p>
       <label class="order_label" for="payment">Payment: </label>
-      <input class="order_input" type="text" value="Cash On Pickup" disabled>
+      <input class="order_input" type="text" value="Pay by XXX" disabled>
     </p>
     <button id="orderDoneBtn">Confirm</button>
   </form>

@@ -1,6 +1,7 @@
 body{
-  background-color: rgb(211, 218, 224);
   font-family: Montserrat, helvetica, sans-serif;
+  /* background-color:rgb(240, 247, 248); */
+  background-color:rgb(238, 250, 252);
   font-size: 0.7em;
   color: rgb(102,102,102);
 }
@@ -9,7 +10,7 @@ body{
   display:flex;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(rgb(252, 246, 251),rgb(202, 162, 179));
+  background-image: linear-gradient(rgb(252, 248, 249),rgb(252, 215, 229));
   margin-left: 8%;
   margin-right: 8%;
 }

@@ -3,7 +3,7 @@
 
 <div id="main_images">
   <% @cakes.each do |cake| %>
-    <a href="/<%= cake.cake_type %>/<%= cake.title %>">
+    <a href="/cakes/<%= cake.cake_type %>/<%= cake.title %>">
       <img class="cake_type_image" src="<%= cake.image_url%>" alt="" title="<%= cake.title%>">
     </a>
   <% end %>

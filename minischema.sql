@@ -38,9 +38,9 @@ values
 ,('Beanpaste','Rainbow',80,'https://i.imgur.com/Q5AVvvS.jpg?1')
 ,('Beanpaste','Peony',70,'https://i.imgur.com/qxaIfom.jpg')
 ,('Beanpaste','Chrysanthemum',75,'https://i.imgur.com/bGlmQOw.jpg')
-,('Cupcake','Assorted_1',10,'https://i.imgur.com/4ubtb12.jpg')
-,('Cupcake','Assorted_2',10,'https://i.imgur.com/XaI427W.jpg')
-,('Cupcake','Unicorn',8,'https://i.imgur.com/4ubtb12.jpg')
+,('Cupcake','Assorted_1 x 6',60,'https://i.imgur.com/4ubtb12.jpg')
+,('Cupcake','Assorted_2 x 6',60,'https://i.imgur.com/XaI427W.jpg')
+,('Cupcake','Unicorn x 6',48,'https://i.imgur.com/mNRqNhq.jpg')
 ;
 
 

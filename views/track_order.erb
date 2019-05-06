@@ -12,7 +12,16 @@
       </p>
       <p>
         <label class="order_label">Price: </label>
-        <input class="order_input" type="text" value="$<%= @cake.price.to_i %>" disabled>
+        <input class="order_input" type="text" value="$<%= @order.total_price.to_i %>" disabled>
+      </p>
+      <p>
+        <label class="order_label" for="quantity">Quantity: </label>
+        <input class="order_input" type="text" value="<%= @order.quantity %>" disabled>
+      </p>
+      <p>
+        <label class="order_label" for="total_price">Total Price: </label>
+        <input class="order_input" type="text" value="$<%= @order.total_price.to_i %>" disabled >
+     </p>
       <p>
         <label class="order_label" for="pickup_date">Pickup Date: </label>
         <input class="order_input" type="date" value="<%= @order.pickup_date %>" disabled>
@@ -27,7 +36,7 @@
       </p>
       <p>
         <label class="order_label" for="payment">Payment: </label>
-        <input class="order_input" type="text" value="Cash On Pickup" disabled>
+        <input class="order_input" type="text" value="Pay by XXX" disabled>
       </p>    
     </form>
   </div>
