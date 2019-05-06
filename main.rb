@@ -86,28 +86,32 @@ post '/cakes/:cake_type/:title/order' do
   @cake_types = CakeType.all
   @cake = Cake.find_by(title: params[:title])
   
+  @quantity = params[:quantity]
+  @pickup_date = params[:pickup_date]
   @customer_name = params[:customer_name]
   @customer_email = params[:email]
-  @pickup_date = params[:pickup_date]
   @password = params[:password]
-  @quantity = params[:quantity]
   
   customer = Customer.find_by(email: @customer_email)
-
+  
+  @order = Order.new
+  
   if !customer
     customer = Customer.new
     customer.name = @customer_name
     customer.email = @customer_email
   
-    # if @password == ""
-    #   @password = "cheese" # Password cannot be empty
-    # end
+    if @password == ""
+      # @password = "cheese" # Password cannot be empty
+    
+      @order.customer_id = customer.id
+    end
   
     customer.password = @password
     customer.save
   end
 
-  @order = Order.new
+  # @order = Order.new
   @order.cake_id = @cake.id 
   @order.customer_id = customer.id
   @order.total_price = @cake.price * @quantity.to_i
